@@ -1,0 +1,46 @@
+@import '_var.scss';
+
+
+.telegram-user-page {
+
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        section.report-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .page-title {
+                font-size: 1.6rem;
+                font-weight: 600;
+                letter-spacing: 4px;
+            }
+
+            .table-card-container {
+                border-radius: 4px;
+                padding: 10px;
+                box-shadow: $BoxShadow;
+                min-height: 250px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .button-wrapper {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+
+                    .btn-update {
+                        @include button-default($bg: $LightenOrange, $color: black, $bg_hover: $PrimaryRed, $color_hover: white);
+                    }
+                }
+            }
+        }
+    }
+}

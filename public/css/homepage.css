@@ -1,0 +1,20 @@
+.homepage .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.homepage .container section.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.homepage .container section.report-list .page-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+.homepage .container section.report-list .table-card-container {
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  min-height: 250px;
+}/*# sourceMappingURL=homepage.css.map */

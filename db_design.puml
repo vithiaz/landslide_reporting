@@ -1,0 +1,43 @@
+@startuml
+
+
+entity report {
+    * id INT PRIMARY_KEY;
+    --
+    * type STRING
+    ' tipe laporan : siaga, bahaya, laporan
+    * messages STRING
+    --
+    * created_at DATETIME
+    * updated_at DATETIME
+}
+
+entity telegram_user {
+    * id INT PRIMARY_KEY
+    --
+    * username STRING
+    * first_name STRING
+    * is_bot BOOLEAN
+    * status enum("active", "inactive")
+    --
+    * created_at DATETIME
+    * updated_at DATETIME
+}
+
+entity sended_report {
+    * id INT PRIMARY_KEY
+    --
+    * report_id FOREIGN(report.id)
+    * telegram_user_id FOREIGN(telegram_user.id)
+    * status enum("sended", "failure", "pending")
+    --
+    * created_at DATETIME
+    * updated_at DATETIME
+}
+
+report ||--o{ sended_report
+sended_report }o--|| telegram_user
+
+
+
+@enduml
